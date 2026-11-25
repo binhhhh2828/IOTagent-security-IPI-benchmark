@@ -1,0 +1,19 @@
+fastapi[standard]
+uvicorn
+pydantic
+pydantic-settings
+sqlalchemy[asyncio]
+asyncpg
+pgvector
+httpx
+python-dotenv
+google-genai
+alembic
+# Auth & JWT
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt
+python-multipart
+email-validator
+# MQTT bridge
+aiomqtt
