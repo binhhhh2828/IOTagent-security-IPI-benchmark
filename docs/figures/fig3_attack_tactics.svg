@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 220" width="820" height="220" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+<title>ASR theo chiến thuật payload, gộp 6 model</title>
+<style>
+ .t1{font-size:13px;fill:#0b0b0b} .t2{font-size:11.5px;fill:#52514e} .tm{font-size:11px;fill:#898781}
+ .tb{font-size:13px;font-weight:700;fill:#0b0b0b} .th{font-size:14px;font-weight:700;fill:#0b0b0b}
+ .grid{stroke:#e1e0d9;stroke-width:1} .base{stroke:#c3c2b7;stroke-width:1} .link{stroke:#b9b8b2;stroke-width:2}
+</style>
+<rect width="820" height="220" fill="#fcfcfb"/>
+<line x1="330" y1="24" x2="330" y2="190" class="base"/>
+<text x="330" y="208" class="tm" text-anchor="middle">0%</text>
+<line x1="470" y1="24" x2="470" y2="190" class="grid"/>
+<text x="470" y="208" class="tm" text-anchor="middle">10%</text>
+<line x1="610" y1="24" x2="610" y2="190" class="grid"/>
+<text x="610" y="208" class="tm" text-anchor="middle">20%</text>
+<line x1="750" y1="24" x2="750" y2="190" class="grid"/>
+<text x="750" y="208" class="tm" text-anchor="middle">30%</text>
+<text x="316" y="45" class="tb" text-anchor="end">drill_test</text>
+<text x="316" y="60" class="t2" text-anchor="end">giả diễn tập PCCC</text>
+<path d="M330,36 H684.4000000000001 a4,4 0 0 1 4,4 V54 a4,4 0 0 1 -4,4 H330 z" fill="#eb6834"/>
+<text x="696.4000000000001" y="52" class="tb">25.6%</text>
+<text x="316" y="85" class="tb" text-anchor="end">technical_notice</text>
+<text x="316" y="100" class="t2" text-anchor="end">giả hiệu chuẩn / thông báo kỹ thuật</text>
+<path d="M330,76 H614.4000000000001 a4,4 0 0 1 4,4 V94 a4,4 0 0 1 -4,4 H330 z" fill="#eb6834"/>
+<text x="626.4000000000001" y="92" class="tb">20.6%</text>
+<text x="316" y="125" class="tb" text-anchor="end">maintenance</text>
+<text x="316" y="140" class="t2" text-anchor="end">giả bảo trì, thử tải</text>
+<path d="M330,116 H555.5999999999999 a4,4 0 0 1 4,4 V134 a4,4 0 0 1 -4,4 H330 z" fill="#eb6834"/>
+<text x="567.5999999999999" y="132" class="tb">16.4%</text>
+<text x="316" y="165" class="tb" text-anchor="end">authority_claim</text>
+<text x="316" y="180" class="t2" text-anchor="end">mạo danh cấp trên</text>
+<path d="M330,156 H466.0 a4,4 0 0 1 4,4 V174 a4,4 0 0 1 -4,4 H330 z" fill="#eb6834"/>
+<text x="478.0" y="172" class="tb">10.0%</text></svg>

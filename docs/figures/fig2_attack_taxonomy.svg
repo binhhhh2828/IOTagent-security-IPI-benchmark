@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 390" width="820" height="390" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+<title>ASR baseline theo nhóm tấn công, 6 model</title>
+<style>
+ .t1{font-size:13px;fill:#0b0b0b} .t2{font-size:11.5px;fill:#52514e} .tm{font-size:11px;fill:#898781}
+ .tb{font-size:13px;font-weight:700;fill:#0b0b0b} .th{font-size:14px;font-weight:700;fill:#0b0b0b}
+ .grid{stroke:#e1e0d9;stroke-width:1} .base{stroke:#c3c2b7;stroke-width:1} .link{stroke:#b9b8b2;stroke-width:2}
+</style>
+<rect width="820" height="390" fill="#fcfcfb"/>
+<text x="260.0" y="56" class="tb" text-anchor="middle">ASR tổng</text>
+<text x="380.0" y="56" class="t1" text-anchor="middle">SUP (88)</text>
+<text x="500.0" y="56" class="t1" text-anchor="middle">DH-A (100)</text>
+<text x="620.0" y="56" class="t1" text-anchor="middle">DH-S (36)</text>
+<text x="740.0" y="56" class="t1" text-anchor="middle">DS (30)</text>
+<text x="186" y="94.0" class="t1" text-anchor="end">Gemini 3.5 flash-lite</text>
+<rect x="201.0" y="71.0" width="118" height="38" rx="4" fill="#6da7ec"/>
+<text x="260.0" y="95.0" font-size="13" font-weight="700" fill="#0b0b0b" text-anchor="middle">27.6%</text>
+<rect x="321.0" y="71.0" width="118" height="38" rx="4" fill="#256abf"/>
+<text x="380.0" y="95.0" font-size="13" font-weight="400" fill="#ffffff" text-anchor="middle">47.3%</text>
+<rect x="441.0" y="71.0" width="118" height="38" rx="4" fill="#6da7ec"/>
+<text x="500.0" y="95.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">26.3%</text>
+<rect x="561.0" y="71.0" width="118" height="38" rx="4" fill="#cde2fb"/>
+<text x="620.0" y="95.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">5.6%</text>
+<rect x="681.0" y="71.0" width="118" height="38" rx="4" fill="#f0efec"/>
+<text x="740.0" y="95.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">0%</text>
+<text x="186" y="134.0" class="t1" text-anchor="end">GPT-5.6 luna</text>
+<rect x="201.0" y="111.0" width="118" height="38" rx="4" fill="#9ec5f4"/>
+<text x="260.0" y="135.0" font-size="13" font-weight="700" fill="#0b0b0b" text-anchor="middle">12.6%</text>
+<rect x="321.0" y="111.0" width="118" height="38" rx="4" fill="#6da7ec"/>
+<text x="380.0" y="135.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">29.5%</text>
+<rect x="441.0" y="111.0" width="118" height="38" rx="4" fill="#cde2fb"/>
+<text x="500.0" y="135.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">5.0%</text>
+<rect x="561.0" y="111.0" width="118" height="38" rx="4" fill="#f0efec"/>
+<text x="620.0" y="135.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">2.8%</text>
+<rect x="681.0" y="111.0" width="118" height="38" rx="4" fill="#f0efec"/>
+<text x="740.0" y="135.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">0%</text>
+<text x="186" y="174.0" class="t1" text-anchor="end">Claude Haiku 5.5</text>
+<rect x="201.0" y="151.0" width="118" height="38" rx="4" fill="#9ec5f4"/>
+<text x="260.0" y="175.0" font-size="13" font-weight="700" fill="#0b0b0b" text-anchor="middle">11.8%</text>
+<rect x="321.0" y="151.0" width="118" height="38" rx="4" fill="#3987e5"/>
+<text x="380.0" y="175.0" font-size="13" font-weight="400" fill="#ffffff" text-anchor="middle">30.7%</text>
+<rect x="441.0" y="151.0" width="118" height="38" rx="4" fill="#f0efec"/>
+<text x="500.0" y="175.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">3.0%</text>
+<rect x="561.0" y="151.0" width="118" height="38" rx="4" fill="#f0efec"/>
+<text x="620.0" y="175.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">0%</text>
+<rect x="681.0" y="151.0" width="118" height="38" rx="4" fill="#f0efec"/>
+<text x="740.0" y="175.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">0%</text>
+<text x="186" y="214.0" class="t1" text-anchor="end">GPT-6 luna</text>
+<rect x="201.0" y="191.0" width="118" height="38" rx="4" fill="#cde2fb"/>
+<text x="260.0" y="215.0" font-size="13" font-weight="700" fill="#0b0b0b" text-anchor="middle">6.9%</text>
+<rect x="321.0" y="191.0" width="118" height="38" rx="4" fill="#9ec5f4"/>
+<text x="380.0" y="215.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">18.2%</text>
+<rect x="441.0" y="191.0" width="118" height="38" rx="4" fill="#f0efec"/>
+<text x="500.0" y="215.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">1.5%</text>
+<rect x="561.0" y="191.0" width="118" height="38" rx="4" fill="#f0efec"/>
+<text x="620.0" y="215.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">0%</text>
+<rect x="681.0" y="191.0" width="118" height="38" rx="4" fill="#f0efec"/>
+<text x="740.0" y="215.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">0%</text>
+<text x="186" y="254.0" class="t1" text-anchor="end">GLM 5.3 flash</text>
+<rect x="201.0" y="231.0" width="118" height="38" rx="4" fill="#f0efec"/>
+<text x="260.0" y="255.0" font-size="13" font-weight="700" fill="#0b0b0b" text-anchor="middle">4.3%</text>
+<rect x="321.0" y="231.0" width="118" height="38" rx="4" fill="#cde2fb"/>
+<text x="380.0" y="255.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">8.0%</text>
+<rect x="441.0" y="231.0" width="118" height="38" rx="4" fill="#f0efec"/>
+<text x="500.0" y="255.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">4.0%</text>
+<rect x="561.0" y="231.0" width="118" height="38" rx="4" fill="#f0efec"/>
+<text x="620.0" y="255.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">0%</text>
+<rect x="681.0" y="231.0" width="118" height="38" rx="4" fill="#f0efec"/>
+<text x="740.0" y="255.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">0%</text>
+<text x="186" y="294.0" class="t1" text-anchor="end">DeepSeek flash</text>
+<rect x="201.0" y="271.0" width="118" height="38" rx="4" fill="#f0efec"/>
+<text x="260.0" y="295.0" font-size="13" font-weight="700" fill="#0b0b0b" text-anchor="middle">2.8%</text>
+<rect x="321.0" y="271.0" width="118" height="38" rx="4" fill="#cde2fb"/>
+<text x="380.0" y="295.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">6.8%</text>
+<rect x="441.0" y="271.0" width="118" height="38" rx="4" fill="#f0efec"/>
+<text x="500.0" y="295.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">1.0%</text>
+<rect x="561.0" y="271.0" width="118" height="38" rx="4" fill="#f0efec"/>
+<text x="620.0" y="295.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">0%</text>
+<rect x="681.0" y="271.0" width="118" height="38" rx="4" fill="#f0efec"/>
+<text x="740.0" y="295.0" font-size="13" font-weight="400" fill="#0b0b0b" text-anchor="middle">0%</text>
+<text x="200" y="352" class="t2">ASR (%), thấp là tốt:</text>
+<rect x="340" y="340" width="50" height="16" rx="3" fill="#f0efec"/>
+<text x="365" y="372" class="tm" text-anchor="middle">0</text>
+<rect x="392" y="340" width="50" height="16" rx="3" fill="#cde2fb"/>
+<text x="417" y="372" class="tm" text-anchor="middle">≥5</text>
+<rect x="444" y="340" width="50" height="16" rx="3" fill="#9ec5f4"/>
+<text x="469" y="372" class="tm" text-anchor="middle">≥10</text>
+<rect x="496" y="340" width="50" height="16" rx="3" fill="#6da7ec"/>
+<text x="521" y="372" class="tm" text-anchor="middle">≥20</text>
+<rect x="548" y="340" width="50" height="16" rx="3" fill="#3987e5"/>
+<text x="573" y="372" class="tm" text-anchor="middle">≥30</text>
+<rect x="600" y="340" width="50" height="16" rx="3" fill="#256abf"/>
+<text x="625" y="372" class="tm" text-anchor="middle">≥40</text>
+<rect x="652" y="340" width="50" height="16" rx="3" fill="#104281"/>
+<text x="677" y="372" class="tm" text-anchor="middle">≥50</text></svg>

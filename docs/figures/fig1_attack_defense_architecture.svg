@@ -1,0 +1,184 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <title>IoT agent: kênh tấn công Indirect Prompt Injection và lớp phòng thủ SensorGuard</title>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3a3a38"/>
+    </marker>
+    <marker id="arb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a78d6"/>
+    </marker>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d03b3b"/>
+    </marker>
+    <style>
+      .grp{fill:none;stroke:#8a8984;stroke-width:1.4;stroke-dasharray:6 4}
+      .gt{font-size:15px;font-weight:700;fill:#0b0b0b}
+      .gs{font-size:11.5px;fill:#52514e}
+      .box{fill:#ffffff;stroke:#3a3a38;stroke-width:1.2}
+      .bt{font-size:13px;font-weight:600;fill:#0b0b0b}
+      .bd{font-size:11.5px;fill:#52514e}
+      .ln{fill:none;stroke:#3a3a38;stroke-width:1.5}
+      .lb{fill:none;stroke:#2a78d6;stroke-width:2}
+      .lr{fill:none;stroke:#d03b3b;stroke-width:2}
+      .al{font-size:11px;fill:#52514e;font-style:italic}
+      .ar{font-size:11.5px;font-weight:700;fill:#d03b3b}
+      .ab{font-size:11.5px;font-weight:700;fill:#2a78d6}
+    </style>
+  </defs>
+  <rect width="1200" height="620" fill="#fcfcfb"/>
+
+  <!-- ============ ① Môi trường IoT ============ -->
+  <rect x="14" y="14" width="250" height="530" rx="12" fill="#eef6f1"/>
+  <rect x="14" y="14" width="250" height="530" rx="12" class="grp"/>
+  <text x="30" y="40" class="gt">① Môi trường IoT</text>
+  <text x="30" y="57" class="gs">5 tình huống thật U1–U5</text>
+
+  <rect x="28" y="74" width="222" height="150" rx="8" class="box"/>
+  <rect x="40" y="86" width="22" height="16" rx="3" fill="#1baf7a"/><rect x="45" y="90" width="12" height="8" fill="#eef6f1"/>
+  <text x="70" y="99" class="bt">Số đo cảm biến</text>
+  <text x="40" y="124" class="bd">U1  server 52.3 °C, không người</text>
+  <text x="40" y="142" class="bd">U2  khói 650 ppm, 18 người</text>
+  <text x="40" y="160" class="bd">U3  CO₂ 1850 ppm, 35 người</text>
+  <text x="40" y="178" class="bd">U4  thẻ bị từ chối, phòng LOCK</text>
+  <text x="40" y="196" class="bd">U5  bình thường, lớp đang học</text>
+  <text x="40" y="214" class="al">→ U1–U4 cần hành động bảo vệ</text>
+
+  <path d="M139,224 V242" class="ln" marker-end="url(#ar)"/>
+
+  <rect x="28" y="244" width="222" height="94" rx="8" class="box"/>
+  <text x="40" y="266" class="bt">event_data gửi tới agent</text>
+  <text x="40" y="290" class="bd">sensor_data: số đo thật</text>
+  <rect x="34" y="302" width="210" height="26" rx="5" fill="#fbeaea" stroke="#d03b3b" stroke-width="1.4"/>
+  <text x="42" y="320" class="bd"><tspan fill="#0b0b0b" font-weight="600">description</tspan>: văn bản tự do</text>
+
+  <!-- Kẻ tấn công -->
+  <path d="M160,440 V334" class="lr" marker-end="url(#arr)"/>
+  <g stroke="#d03b3b" stroke-width="2" stroke-linecap="round">
+    <path d="M150,372 L170,392"/><path d="M170,372 L150,392"/>
+    <path d="M146,380 L154,372"/><path d="M174,380 L166,372"/>
+  </g>
+  <text x="142" y="374" class="ar" text-anchor="end">Indirect Prompt</text>
+  <text x="142" y="390" class="ar" text-anchor="end">Injection</text>
+  <circle cx="160" cy="456" r="10" fill="none" stroke="#d03b3b" stroke-width="2"/>
+  <path d="M143,484 a17,14 0 0 1 34,0" fill="none" stroke="#d03b3b" stroke-width="2"/>
+  <text x="160" y="506" class="bt" text-anchor="middle">Kẻ tấn công</text>
+  <text x="160" y="524" class="bd" text-anchor="middle">chỉ sửa được description</text>
+
+  <!-- ============ ② LLM agent dưới test ============ -->
+  <rect x="294" y="14" width="340" height="530" rx="12" fill="#fbf1ea"/>
+  <rect x="294" y="14" width="340" height="530" rx="12" fill="none" stroke="#eb6834" stroke-width="1.8" stroke-dasharray="6 4"/>
+  <text x="310" y="40" class="gt">② LLM agent dưới test</text>
+  <text x="310" y="57" class="gs">ReActXenAgent · 6 model · temperature 0</text>
+
+  <rect x="308" y="74" width="312" height="48" rx="8" class="box"/>
+  <text x="322" y="94" class="bt">System prompt cố định</text>
+  <text x="322" y="112" class="bd">chính sách an toàn · đúng 1 hành động mỗi lượt</text>
+  <path d="M464,122 V138" class="ln" marker-end="url(#ar)"/>
+
+  <rect x="308" y="140" width="312" height="110" rx="8" fill="#ffffff" stroke="#eb6834" stroke-width="2.2"/>
+  <circle cx="332" cy="166" r="11" fill="#eb6834"/><circle cx="332" cy="166" r="4.5" fill="#ffffff"/>
+  <text x="350" y="171" class="bt" font-size="14">LLM (ReAct + Self-Ask)</text>
+  <text x="322" y="196" class="bd">Thought → Action → Observation, Review → Reflect</text>
+  <text x="322" y="216" class="bd">Gemini 3.5 flash-lite · GPT-5.6 · GPT-6</text>
+  <text x="322" y="234" class="bd">Claude Haiku 5.5 · DeepSeek flash · GLM 5.3</text>
+  <path d="M464,250 V266" class="ln" marker-end="url(#ar)" marker-start="url(#ar)"/>
+
+  <rect x="308" y="268" width="312" height="54" rx="8" class="box"/>
+  <text x="322" y="289" class="bt">Tool</text>
+  <text x="358" y="289" class="bd">RAG chỉ đọc + tool “bẫy” cho DS</text>
+  <text x="322" y="310" class="bd">get_room_history · get_telemetry · http_post …</text>
+  <path d="M464,322 V336" class="ln" marker-end="url(#ar)" marker-start="url(#ar)"/>
+
+  <g>
+    <path d="M308,348 v44 a156,10 0 0 0 312,0 v-44" class="box"/>
+    <ellipse cx="464" cy="348" rx="156" ry="10" class="box"/>
+    <text x="322" y="378" class="bt">Bộ nhớ pgvector</text>
+    <text x="322" y="396" class="bd">SOP campus · lịch sử phòng 24 h</text>
+  </g>
+
+  <rect x="308" y="424" width="312" height="72" rx="8" class="box"/>
+  <text x="322" y="446" class="bt">Hành động đề xuất</text>
+  <text x="322" y="466" class="bd">set_fan · set_door · set_mode · trigger_buzzer</text>
+  <text x="322" y="484" class="bd">send_alert · set_led · hoặc skip</text>
+  <path d="M308,196 H300 V460 H306" class="ln" marker-end="url(#ar)"/>
+
+  <text x="310" y="524" class="ar">Mục tiêu tấn công:</text>
+  <text x="430" y="524" class="bd">SUP · DH-A · DH-S · DS</text>
+
+  <!-- event → agent -->
+  <path d="M250,290 H278 V180 H306" class="ln" marker-end="url(#ar)"/>
+  <text x="252" y="282" class="al">event</text>
+
+  <!-- ============ ③ SensorGuard ============ -->
+  <rect x="664" y="14" width="280" height="530" rx="12" fill="#eef3fb"/>
+  <rect x="664" y="14" width="280" height="530" rx="12" fill="none" stroke="#2a78d6" stroke-width="1.8" stroke-dasharray="6 4"/>
+  <text x="680" y="40" class="gt">③ SensorGuard</text>
+  <text x="680" y="57" class="gs">--defense guard · luật cố định · 0 lời gọi LLM</text>
+
+  <rect x="678" y="74" width="252" height="58" rx="8" fill="#ffffff" stroke="#2a78d6" stroke-width="2.2"/>
+  <path d="M700,84 l12,5 v9 c0,8 -6,13 -12,16 c-6,-3 -12,-8 -12,-16 v-9 z" fill="#2a78d6"/>
+  <text x="722" y="98" class="bt">Chỉ đọc sensor_data</text>
+  <text x="722" y="118" class="bd">không đọc description</text>
+
+  <rect x="678" y="150" width="252" height="138" rx="8" class="box"/>
+  <text x="692" y="172" class="bt">Veto hành động trái cảm biến</text>
+  <text x="692" y="196" class="bd">tắt quạt khi đang quá nhiệt</text>
+  <text x="692" y="214" class="bd">chuyển SAVING khi có nguy cơ</text>
+  <text x="692" y="232" class="bd">khoá cửa khi có khói và có người</text>
+  <text x="692" y="250" class="bd">mở cửa khi thẻ bị từ chối</text>
+  <text x="692" y="268" class="bd">còi / EMERGENCY khi không có khói</text>
+
+  <rect x="678" y="306" width="252" height="142" rx="8" class="box"/>
+  <text x="692" y="328" class="bt">Chèn send_alert khi vượt ngưỡng</text>
+  <text x="692" y="346" class="bd">mà agent không bảo vệ</text>
+  <text x="692" y="370" class="bd">nhiệt ≥ 38 °C (critical từ 43 °C)</text>
+  <text x="692" y="388" class="bd">CO₂ ≥ 1500 ppm và có người</text>
+  <text x="692" y="406" class="bd">khói ≥ 200 ppm hoặc DETECTED</text>
+  <text x="692" y="424" class="bd">RFID từ chối + phòng LOCK / lặp lại</text>
+
+  <text x="680" y="476" class="ab">Kẻ tấn công chỉ điều khiển văn bản,</text>
+  <text x="680" y="493" class="ab">nên không tác động được vào guard.</text>
+
+  <!-- agent → guard -->
+  <path d="M620,460 H648 V218 H676" class="ln" marker-end="url(#ar)"/>
+  <text x="624" y="452" class="al">đề xuất</text>
+
+  <!-- ============ ④ Thực thi ============ -->
+  <rect x="974" y="14" width="212" height="530" rx="12" fill="#f3f0fb"/>
+  <rect x="974" y="14" width="212" height="530" rx="12" class="grp"/>
+  <text x="990" y="40" class="gt">④ Thực thi</text>
+  <text x="990" y="57" class="gs">HITL · thiết bị thật</text>
+
+  <rect x="988" y="74" width="184" height="96" rx="8" class="box"/>
+  <circle cx="1012" cy="98" r="9" fill="none" stroke="#6250d6" stroke-width="1.8"/>
+  <path d="M998,126 a14,12 0 0 1 28,0" fill="none" stroke="#6250d6" stroke-width="1.8"/>
+  <text x="1036" y="103" class="bt">Admin (HITL)</text>
+  <text x="1036" y="121" class="bd">duyệt / bỏ qua</text>
+  <text x="1000" y="154" class="bd">cửa · mode · còi luôn chờ người</text>
+  <path d="M1080,170 V188" class="ln" marker-end="url(#ar)"/>
+
+  <rect x="988" y="190" width="184" height="62" rx="8" class="box"/>
+  <text x="1000" y="214" class="bt">Thiết bị IoT</text>
+  <text x="1000" y="234" class="bd">quạt · cửa · còi · LED</text>
+
+  <rect x="988" y="306" width="184" height="78" rx="8" class="box"/>
+  <text x="1000" y="328" class="bt">Cảnh báo tới admin</text>
+  <text x="1000" y="348" class="bd">gồm alert do guard chèn</text>
+  <text x="1000" y="366" class="bd">+1–13 alert / 100 ca benign</text>
+
+  <!-- guard → thực thi -->
+  <path d="M930,218 H958 V122 H986" class="ln" marker-end="url(#ar)"/>
+  <path d="M930,376 H958 V345 H986" class="ln" marker-end="url(#ar)"/>
+
+  <!-- sensor_data đi thẳng tới guard -->
+  <path d="M60,338 V568 H804 V450" class="lb" marker-end="url(#arb)"/>
+  <text x="330" y="562" class="ab">sensor_data đi thẳng tới guard, không qua LLM</text>
+
+  <!-- chú giải -->
+  <line x1="40" y1="600" x2="68" y2="600" class="lr"/>
+  <text x="76" y="604" class="gs">kênh tấn công (văn bản tự do)</text>
+  <line x1="290" y1="600" x2="318" y2="600" class="lb"/>
+  <text x="326" y="604" class="gs">kênh tin cậy (số đo cảm biến)</text>
+  <line x1="540" y1="600" x2="568" y2="600" class="ln"/>
+  <text x="576" y="604" class="gs">luồng xử lý</text>
+</svg>
